@@ -47,15 +47,15 @@ const Dashboard = () => {
 				<Card className='text-center mx-5 my-5'>
 					<Card.Header as='h1'>Hi {username}</Card.Header>
 					<Card.Body>
-						<Card.Title>Welcome to LearnIt</Card.Title>
+						<Card.Title>Welcome to NoteApp</Card.Title>
 						<Card.Text>
-							Click the button below to track your first skill to learn
+							
 						</Card.Text>
 						<Button
 							variant='primary'
 							onClick={setShowAddPostModal.bind(this, true)}
 						>
-							LearnIt!
+							Bắt Đầu 
 						</Button>
 					</Card.Body>
 				</Card>

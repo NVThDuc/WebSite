@@ -27,7 +27,7 @@ const NavbarMenu = () => {
 					height='32'
 					className='mr-2'
 				/>
-				LearnIt
+				NoteApp
 			</Navbar.Brand>
 
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -39,14 +39,14 @@ const NavbarMenu = () => {
 						to='/dashboard'
 						as={Link}
 					>
-						Dashboard
+						Noted
 					</Nav.Link>
 					<Nav.Link
 						className='font-weight-bolder text-white'
 						to='/about'
 						as={Link}
 					>
-						About
+						About Us
 					</Nav.Link>
 				</Nav>
 
