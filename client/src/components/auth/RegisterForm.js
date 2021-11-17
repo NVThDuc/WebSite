@@ -30,7 +30,7 @@ const RegisterForm = () => {
 		event.preventDefault()
 
 		if (password !== confirmPassword) {
-			setAlert({ type: 'danger', message: 'Passwords do not match' })
+			setAlert({ type: 'danger', message: 'Mật khẩu không trùng khớp ' })
 			setTimeout(() => setAlert(null), 5000)
 			return
 		}
@@ -54,7 +54,7 @@ const RegisterForm = () => {
 				<Form.Group>
 					<Form.Control
 						type='text'
-						placeholder='Username'
+						placeholder='Tên Đăng Nhập'
 						name='username'
 						required
 						value={username}
@@ -64,7 +64,7 @@ const RegisterForm = () => {
 				<Form.Group>
 					<Form.Control
 						type='password'
-						placeholder='Password'
+						placeholder='Mật Khẩu '
 						name='password'
 						required
 						value={password}
@@ -74,7 +74,7 @@ const RegisterForm = () => {
 				<Form.Group>
 					<Form.Control
 						type='password'
-						placeholder='Confirm Password'
+						placeholder='Nhập Lại Mật Khẩu'
 						name='confirmPassword'
 						required
 						value={confirmPassword}
@@ -82,14 +82,14 @@ const RegisterForm = () => {
 					/>
 				</Form.Group>
 				<Button variant='success' type='submit'>
-					Register
+					Đăng Ký 
 				</Button>
 			</Form>
 			<p>
-				Already have an account?
+				Bạn đã có tài khoản ?
 				<Link to='/login'>
 					<Button variant='info' size='sm' className='ml-2'>
-						Login
+						Đăng Nhập
 					</Button>
 				</Link>
 			</p>
