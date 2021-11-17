@@ -52,7 +52,7 @@ const AddPostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Title'
+							placeholder='Chủ Đề'
 							name='title'
 							required
 							aria-describedby='title-help'
@@ -67,7 +67,7 @@ const AddPostModal = () => {
 						<Form.Control
 							as='textarea'
 							rows={3}
-							placeholder='Description'
+							placeholder='Mô Tả'
 							name='description'
 							value={description}
 							onChange={onChangeNewPostForm}
@@ -76,7 +76,7 @@ const AddPostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Youtube Tutorial URL'
+							placeholder='Đường dẫn bạn học'
 							name='url'
 							value={url}
 							onChange={onChangeNewPostForm}

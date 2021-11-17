@@ -26,7 +26,7 @@
 .landing-inner h1,
 .landing-inner h4,
 .landing-inner p {
-	color: white;
+	color: black;
 }
 
 .spinner-container {
@@ -41,7 +41,7 @@
 /* Post button */
 .post-button {
 	padding-top: 0;
-	background: transparent;
+	background: black;
 	border: none;
 }
 

@@ -45,7 +45,7 @@ const Dashboard = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>Hi {username}</Card.Header>
+					<Card.Header as='h1'>Xin Chào {username}</Card.Header>
 					<Card.Body>
 						<Card.Title>Welcome to NoteApp</Card.Title>
 						<Card.Text>

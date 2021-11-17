@@ -21,7 +21,7 @@ const NavbarMenu = () => {
 		<Navbar expand='lg' bg='primary' variant='dark' className='shadow'>
 			<Navbar.Brand className='font-weight-bolder text-white'>
 				<img
-					src={learnItLogo}
+					src="https://thumbs.dreamstime.com/b/note-linear-icon-modern-outline-logo-concept-white-back-background-user-interface-web-navigation-collection-suitable-133526830.jpg"
 					alt='learnItLogo'
 					width='32'
 					height='32'
@@ -66,7 +66,7 @@ const NavbarMenu = () => {
 							height='32'
 							className='mr-2'
 						/>
-						Logout
+						Đăng Xuất 
 					</Button>
 				</Nav>
 			</Navbar.Collapse>
