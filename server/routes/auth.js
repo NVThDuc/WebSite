@@ -13,11 +13,11 @@ router.get('/', verifyToken, async (req, res) => {
 	try {
 		const user = await User.findById(req.userId).select('-password')
 		if (!user)
-			return res.status(400).json({ success: false, message: 'User not found' })
+			return res.status(400).json({ success: false, message: 'Không Tìm Thầy Người Dùng' })
 		res.json({ success: true, user })
 	} catch (error) {
 		console.log(error)
-		res.status(500).json({ success: false, message: 'Internal server error' })
+		res.status(500).json({ success: false, message: 'Lỗi Máy Chủ ' })
 	}
 })
 
@@ -31,7 +31,7 @@ router.post('/register', async (req, res) => {
 	if (!username || !password)
 		return res
 			.status(400)
-			.json({ success: false, message: 'Missing username and/or password' })
+			.json({ success: false, message: 'Hãy Nhập Tên Đăng Nhập Và Mật Khẩu ' })
 
 	try {
 		// Check for existing user
@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
 		if (user)
 			return res
 				.status(400)
-				.json({ success: false, message: 'Username already taken' })
+				.json({ success: false, message: 'Tên Tài Khoản Đã Được Sử Dụng' })
 
 		// All good
 		const hashedPassword = await argon2.hash(password)
@@ -55,12 +55,12 @@ router.post('/register', async (req, res) => {
 
 		res.json({
 			success: true,
-			message: 'User created successfully',
+			message: 'Tạo Tài Khoản Thành Công',
 			accessToken
 		})
 	} catch (error) {
 		console.log(error)
-		res.status(500).json({ success: false, message: 'Internal server error' })
+		res.status(500).json({ success: false, message: 'Lỗi Máy Chủ' })
 	}
 })
 
@@ -74,7 +74,7 @@ router.post('/login', async (req, res) => {
 	if (!username || !password)
 		return res
 			.status(400)
-			.json({ success: false, message: 'Missing username and/or password' })
+			.json({ success: false, message: 'Hãy Nhập Tên Đăng Nhập Và Mật Khẩu' })
 
 	try {
 		// Check for existing user
@@ -82,14 +82,14 @@ router.post('/login', async (req, res) => {
 		if (!user)
 			return res
 				.status(400)
-				.json({ success: false, message: 'Incorrect username or password' })
+				.json({ success: false, message: 'Sai Tên Đăng Nhập Hoặc Mật Khẩu' })
 
 		// Username found
 		const passwordValid = await argon2.verify(user.password, password)
 		if (!passwordValid)
 			return res
 				.status(400)
-				.json({ success: false, message: 'Incorrect username or password' })
+				.json({ success: false, message: 'Sai Tên Đăng Nhập Hoặc Mật Khẩu' })
 
 		// All good
 		// Return token
@@ -100,12 +100,12 @@ router.post('/login', async (req, res) => {
 
 		res.json({
 			success: true,
-			message: 'User logged in successfully',
+			message: 'Đăng Nhập Thành Công !',
 			accessToken
 		})
 	} catch (error) {
 		console.log(error)
-		res.status(500).json({ success: false, message: 'Internal server error' })
+		res.status(500).json({ success: false, message: 'Lỗi Máy Chủ ! ' })
 	}
 })
 

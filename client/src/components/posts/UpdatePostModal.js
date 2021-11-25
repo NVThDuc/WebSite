@@ -51,7 +51,7 @@ const UpdatePostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Title'
+							placeholder='Nội Dung'
 							name='title'
 							required
 							aria-describedby='title-help'
@@ -66,7 +66,7 @@ const UpdatePostModal = () => {
 						<Form.Control
 							as='textarea'
 							rows={3}
-							placeholder='Description'
+							placeholder='Mô Tả '
 							name='description'
 							value={description}
 							onChange={onChangeUpdatedPostForm}
@@ -75,7 +75,7 @@ const UpdatePostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Youtube Tutorial URL'
+							placeholder='Đường Dẫn'
 							name='url'
 							value={url}
 							onChange={onChangeUpdatedPostForm}
@@ -88,9 +88,9 @@ const UpdatePostModal = () => {
 							name='status'
 							onChange={onChangeUpdatedPostForm}
 						>
-							<option value='TO LEARN'>TO LEARN</option>
-							<option value='LEARNING'>LEARNING</option>
-							<option value='LEARNED'>LEARNED</option>
+							<option value='TO LEARN'>Đánh Dấu</option>
+							<option value='LEARNING'>Đang Làm</option>
+							<option value='LEARNED'>Đã Xong</option>
 						</Form.Control>
 					</Form.Group>
 				</Modal.Body>
@@ -99,7 +99,7 @@ const UpdatePostModal = () => {
 						Cancel
 					</Button>
 					<Button variant='primary' type='submit'>
-						LearnIt!
+						Note!
 					</Button>
 				</Modal.Footer>
 			</Form>

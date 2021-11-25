@@ -4,8 +4,10 @@ import Col from 'react-bootstrap/Col'
 
 const About = () => {
 	return (
-		<Row className='mt-5' style={{ marginRight: 0 }}>
-			<Col className='text-center'>
+		<div className = 'text-center'>
+			<Row className='mt-5' style={{ marginRight: 0 }}>
+			<Col >
+			<i class="bi bi-facebook"></i>
 				<Button
 					variant='primary'
 					href='https://www.facebook.com/profile.php?id=100031891651861'
@@ -13,16 +15,32 @@ const About = () => {
 				>
 					About : Nguyễn Văn Thành Đức 
 				</Button>
+				
 
-				<Button
-					variant='primary'
-					href='https://www.facebook.com/yung5152'
-					size='lg'
-				>
-					About : Phạm Duy Hưng
-				</Button>
+
+				
+
+				
 			</Col>
 		</Row>
+
+<Row className='mt-5' style={{ marginRight: 0 }}>
+<Col >
+	
+
+	
+
+	<Button
+		variant='primary'
+		href='https://www.facebook.com/yung5152'
+		size='lg'
+	>
+		About : Phạm Duy Hưng
+	</Button>
+</Col>
+</Row>
+		</div>
+		
 	)
 }
 

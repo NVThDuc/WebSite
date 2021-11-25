@@ -88,7 +88,7 @@ const RegisterForm = () => {
 			<p>
 				Bạn đã có tài khoản ?
 				<Link to='/login'>
-					<Button variant='info' size='sm' className='ml-2'>
+					<Button variant='info' size='sm' className='ml-2' >
 						Đăng Nhập
 					</Button>
 				</Link>

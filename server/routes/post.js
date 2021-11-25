@@ -15,7 +15,7 @@ router.get('/', verifyToken, async (req, res) => {
 		res.json({ success: true, posts })
 	} catch (error) {
 		console.log(error)
-		res.status(500).json({ success: false, message: 'Internal server error' })
+		res.status(500).json({ success: false, message: 'Máy Chủ Lỗi ' })
 	}
 })
 
@@ -29,7 +29,7 @@ router.post('/', verifyToken, async (req, res) => {
 	if (!title)
 		return res
 			.status(400)
-			.json({ success: false, message: 'Title is required' })
+			.json({ success: false, message: 'Hãy Nhập Nội Dung !' })
 
 	try {
 		const newPost = new Post({
@@ -42,10 +42,10 @@ router.post('/', verifyToken, async (req, res) => {
 
 		await newPost.save()
 
-		res.json({ success: true, message: 'Happy learning!', post: newPost })
+		res.json({ success: true, message: '', post: newPost })
 	} catch (error) {
 		console.log(error)
-		res.status(500).json({ success: false, message: 'Internal server error' })
+		res.status(500).json({ success: false, message: 'Lỗi Máy Chủ' })
 	}
 })
 
