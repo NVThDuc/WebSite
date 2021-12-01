@@ -68,7 +68,7 @@ const LoginForm = () => {
 			<p>
 				Bạn chưa có tài khoản?
 				<Link to='/register'>
-					<Button variant='info' size='sm' className='ml-2'>
+					<Button variant='info' size='sm' className='ml-2' style = {{background:'purple'}}>
 						Đăng Ký
 					</Button>
 				</Link>

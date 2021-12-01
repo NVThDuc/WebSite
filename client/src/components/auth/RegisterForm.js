@@ -51,7 +51,7 @@ const RegisterForm = () => {
 			<Form className='my-4' onSubmit={register}>
 				<AlertMessage info={alert} />
 
-				<Form.Group>
+				<Form.Group >
 					<Form.Control
 						type='text'
 						placeholder='Tên Đăng Nhập'
@@ -81,14 +81,14 @@ const RegisterForm = () => {
 						onChange={onChangeRegisterForm}
 					/>
 				</Form.Group>
-				<Button variant='success' type='submit'>
+				<Button variant='success' type='submit' style = {{background:'black'}} >
 					Đăng Ký 
 				</Button>
 			</Form>
 			<p>
 				Bạn đã có tài khoản ?
 				<Link to='/login'>
-					<Button variant='info' size='sm' className='ml-2' >
+					<Button variant='info' size='sm' className='ml-2' style = {{background:'purple'}}>
 						Đăng Nhập
 					</Button>
 				</Link>

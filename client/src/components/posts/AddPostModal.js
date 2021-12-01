@@ -38,7 +38,7 @@ const AddPostModal = () => {
 	}
 
 	const resetAddPostData = () => {
-		setNewPost({ title: '', description: '', url: '', status: 'TO LEARN' })
+		setNewPost({ title: '', description: '', url: '', status: 'Đánh Dấu' })
 		setShowAddPostModal(false)
 	}
 
@@ -54,7 +54,7 @@ const AddPostModal = () => {
 							type='text'
 							placeholder='Chủ Đề'
 							name='title'
-							required
+							
 							aria-describedby='title-help'
 							value={title}
 							onChange={onChangeNewPostForm}
@@ -84,10 +84,10 @@ const AddPostModal = () => {
 					</Form.Group>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant='secondary' onClick={closeDialog}>
+					<Button variant='secondary' onClick={closeDialog} style = {{background:'black'}}>
 						Cancel
 					</Button>
-					<Button variant='primary' type='submit'>
+					<Button variant='primary' type='submit' style = {{background:'purple'}}>
 						Ok!
 					</Button>
 				</Modal.Footer>

@@ -51,7 +51,7 @@ const Dashboard = () => {
 						<Card.Text>
 							
 						</Card.Text>
-						<Button
+						<Button style = {{background:'black'}}
 							variant='primary'
 							onClick={setShowAddPostModal.bind(this, true)}
 						>
@@ -75,7 +75,7 @@ const Dashboard = () => {
 				{/* Open Add Post Modal */}
 				<OverlayTrigger
 					placement='left'
-					overlay={<Tooltip>Add a new thing to learn</Tooltip>}
+					overlay={<Tooltip>Add a new thing TO LEARN</Tooltip>}
 				>
 					<Button
 						className='btn-floating'

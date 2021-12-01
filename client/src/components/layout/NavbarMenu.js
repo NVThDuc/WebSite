@@ -18,8 +18,8 @@ const NavbarMenu = () => {
 	const logout = () => logoutUser()
 
 	return (
-		<Navbar expand='lg' bg='primary' variant='dark' className='shadow'>
-			<Navbar.Brand className='font-weight-bolder text-white'>
+		<Navbar style = {{background:'black'}} >
+			<Navbar.Brand className='font-weight-bolder text-white ' style = {{background:'black'}} >
 				<img
 					src="https://thumbs.dreamstime.com/b/note-linear-icon-modern-outline-logo-concept-white-back-background-user-interface-web-navigation-collection-suitable-133526830.jpg"
 					alt='learnItLogo'
@@ -32,8 +32,8 @@ const NavbarMenu = () => {
 
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
 
-			<Navbar.Collapse id='basic-navbar-nav'>
-				<Nav className='mr-auto'>
+			<Navbar.Collapse id='basic-navbar-nav' style = {{background:'black'}} >
+				<Nav className='mr-auto' >
 					<Nav.Link
 						className='font-weight-bolder text-white'
 						to='/dashboard'
@@ -54,7 +54,7 @@ const NavbarMenu = () => {
 					<Nav.Link className='font-weight-bolder text-white' disabled>
 						Welcome {username}
 					</Nav.Link>
-					<Button
+					<Button style = {{background:'purple'}}
 						variant='secondary'
 						className='font-weight-bolder text-white'
 						onClick={logout}

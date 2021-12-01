@@ -59,7 +59,7 @@ router.put('/:id', verifyToken, async (req, res) => {
 	if (!title)
 		return res
 			.status(400)
-			.json({ success: false, message: 'Title is required' })
+			.json({ success: false, message: 'Nội Dung Thì Được Yêu Cầu ' })
 
 	try {
 		let updatedPost = {
@@ -86,7 +86,7 @@ router.put('/:id', verifyToken, async (req, res) => {
 
 		res.json({
 			success: true,
-			message: 'Excellent progress!',
+			message: 'Cập Nhật Thành Công !',
 			post: updatedPost
 		})
 	} catch (error) {

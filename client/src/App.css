@@ -91,12 +91,14 @@ button.post-button.btn:active {
 	background: transparent;
 }
 
+
 .tooltip .arrow::before {
-	border-left-color: red;
+	border-left-color: #78c2ad;
 }
 
+
 .tooltip-inner {
-	background: red;
+	background: #78c2ad;
 }
 
 /* Post border thicker */

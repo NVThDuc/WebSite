@@ -44,7 +44,7 @@ const UpdatePostModal = () => {
 	return (
 		<Modal show={showUpdatePostModal} onHide={closeDialog}>
 			<Modal.Header closeButton>
-				<Modal.Title>Making progress?</Modal.Title>
+				<Modal.Title>Cập Nhật</Modal.Title>
 			</Modal.Header>
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
@@ -53,13 +53,13 @@ const UpdatePostModal = () => {
 							type='text'
 							placeholder='Nội Dung'
 							name='title'
-							required
+							
 							aria-describedby='title-help'
 							value={title}
 							onChange={onChangeUpdatedPostForm}
 						/>
 						<Form.Text id='title-help' muted>
-							Required
+							
 						</Form.Text>
 					</Form.Group>
 					<Form.Group>
@@ -88,17 +88,17 @@ const UpdatePostModal = () => {
 							name='status'
 							onChange={onChangeUpdatedPostForm}
 						>
-							<option value='TO LEARN'>Đánh Dấu</option>
-							<option value='LEARNING'>Đang Làm</option>
-							<option value='LEARNED'>Đã Xong</option>
+							<option value='TO LEARN'>TO LEARN</option>
+							<option value='LEARNING'>LEARNING</option>
+							<option value='LEARNED'>LEARNED</option>
 						</Form.Control>
 					</Form.Group>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant='secondary' onClick={closeDialog}>
+					<Button variant='secondary' onClick={closeDialog}  style= {{background:'black'}}>
 						Cancel
 					</Button>
-					<Button variant='primary' type='submit'>
+					<Button variant='primary' type='submit' style= {{background:'purple'}}>
 						Note!
 					</Button>
 				</Modal.Footer>
