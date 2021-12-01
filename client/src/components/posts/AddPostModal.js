@@ -38,7 +38,7 @@ const AddPostModal = () => {
 	}
 
 	const resetAddPostData = () => {
-		setNewPost({ title: '', description: '', url: '', status: 'Đánh Dấu' })
+		setNewPost({ title: '', description: '', url: '', status: 'TO LEARN' })
 		setShowAddPostModal(false)
 	}
 
