@@ -47,7 +47,7 @@ router.post('/register', async (req, res) => {
 		const newUser = new User({ username, password: hashedPassword })
 		await newUser.save()
 
-		// Return token
+		
 		const accessToken = jwt.sign(
 			{ userId: newUser._id },
 			process.env.ACCESS_TOKEN_SECRET
@@ -64,9 +64,8 @@ router.post('/register', async (req, res) => {
 	}
 })
 
-// @route POST api/auth/login
-// @desc Login user
-// @access Public
+
+
 router.post('/login', async (req, res) => {
 	const { username, password } = req.body
 
